@@ -1,0 +1,20 @@
+{
+    "name": "a03_2",
+    "version": "0.0.1",
+    "description": "Assasin's Creed",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "express": "latest",
+        "morgan": "latest",
+        "body-parser": "latest",
+        "ejs": "latest",
+        "nodemailer": "latest",
+        "nodemailer-mailgun-transport": "latest",
+        "nconf": "latest"
+    },
+    "author": "Teja",
+    "license": "Apache-2.0"
+}

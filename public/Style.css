@@ -1,0 +1,163 @@
+#propic{
+    border-radius: 50%;
+    padding-left: 5%;
+    width: 40%;
+}
+
+body{ 
+    background-size: 100%;
+}
+
+.navbar{
+    background-color:rgb(64, 70, 77);
+}
+
+#foot-page{
+    bottom: 0px;
+    background-color: rgb(64, 70, 77);
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: fixed;
+    width: 100%;
+}
+
+#news{
+    padding-left: 50px;
+}
+
+.slideshow{
+    max-width: 80%;
+    padding-left: 20%;
+}
+
+.mySlides{
+    width: 100%;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 160px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 160px;
+    height: 90px;
+}
+
+.nav.navbar-nav li a {
+    color:white;
+}
+
+.navbar-header a{
+    color: white;
+}
+
+.contactLinks{
+    width: 5%;
+    height: 5%;
+}
+
+.btn{
+    background-color: darkgreen;
+}
+
+.btn:hover{
+    background-color: green;
+}
+
+#resetbtn{
+    background-color: rgba(32, 32, 39, 0.5);
+    opacity: 50%;
+    width: 300%;
+}
+
+#resetbtn:hover{
+    background-color: darkgreen;
+
+}
+
+span{
+    font-weight: bold;
+}
+
+dd{
+    text-align: justify;
+}
+
+#aclogo{
+    border-radius: 20%;
+    width: 60px;
+    padding-left: 5%;
+}
+
+#bearcat{
+    width: 50%;
+}
+
+.blockquote-footer{
+    color: black;
+}
+
+blockquote{
+    font-size: 15px;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 10% 10% 10%;
+    color: #444;
+}
+  
+section {
+    color: #fff;
+    border-radius: 0.5em;
+    background-color: rgba(32, 32, 39, 0.5);
+    padding: 1em;
+    margin: 0.5em;
+    font-size: 1em;
+    text-align: center;
+    opacity: 50%;    
+}
+
+#ctnt{
+    margin-bottom: 80px;
+}
+
+.calculator{
+    width: 40px;
+    height: 40px;
+}
+
+input:invalid {
+    border: 2px solid red;
+  }
+  
+input:valid {
+    border: 2px solid rgb(122, 122, 122);
+  }
+
+  .video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
