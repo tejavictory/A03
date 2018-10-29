@@ -91,46 +91,88 @@ app.get('/contact', function (req, res) {
  */
 // 5 http POST /contact
 app.post('/Contact', function (req, res) {
-  const name = req.body.inputname
-  const email = req.body.inputemail
-  const phone = req.body.inputphone
-  const comment = req.body.inputcomment
+  const name = req.body.name
+  const email = req.body.email
+  const mobile = req.body.mobile
+  const subject = req.body.subject
+  const mes = req.body.message
   const isError = false
 
   // logs to the terminal window (not the browser)
-  const s = '\nCONTACT FORM DATA: ' + name + ' ' + email + ' ' + phone + ' ' + comment + '\n'
+  const s = '\nCONTACT FORM DATA: ' + name + ' ' + email + ' ' + mobile + ' ' + subject + ' ' + mes +'\n'
   console.log(s)
 
-  /* const mailOptions = {
-    from: 'Denise Case <denisecase@gmail.com>', // sender address
-    to: 'dcase@nwmissouri.edu, denisecase@gmail.com', // list of receivers
+/*   app.post('/contact', function (req, res) {
+    let mailOpts, smtpTrans;
+    smtpTrans = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+        user: 'nodemailertestinga03@gmail.com',
+        pass: 'Amazon@123'
+      }
+    });
+    mailOpts = {
+      from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+      to: 's533708@nwmissouri.edu',
+      subject: 'New message from contact form',
+      text: s
+    };
+    smtpTrans.sendMail(mailOpts, function (error, response) {
+      if (error) {
+        res.render('contact-failure');
+      }
+      else {
+        res.render('contact-success');
+      }
+      console.log('done')
+    });
+  }); */
+
+   const mailOptions = {
+    from: req.body.name + ' &lt;' + req.body.email + '&gt;', // sender address
+    to: 's533708@nwmissouri.edu', // list of receivers
     subject: 'Message from Website Contact page', // Subject line
     text: s,
     err: isError
   }
 
   try {
-    const auth = require('./config.json')
+/*     const auth = require('./config.json')
+ */
     // create transporter object capable of sending email using the default SMTP transport
-    const transporter = nodemailer.createTransport(mg(auth))
-
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      secure: false,
+      port: 25,
+      auth: {
+        user: 'nodemailertestinga03@gmail.com',
+        pass: 'Amazon@123'
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    });
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
         console.log('\nERROR: ' + error + '\n')
-        res.render('contact-error.ejs')
-      } else {
+        window.alert("Error Occured")
+/*         res.render('contact-error.ejs')
+ */      } else {
         console.log('Sending email...')
         if (info) { console.log('\nres SENT: ' + info.res + '\n') }
-        res.render('contact-confirm.ejs')
-      }
+        res.redirect('/index');
+        /*         res.render('contact-confirm.ejs')
+ */      }
     })
   }
   catch (e) {
     console.log(e.message)
-    res.render('contact-error.ejs')
-  } */
+/*     res.render('contact-error.ejs')
+ */  }
 })
-
+ 
 // 6 this will execute for all unknown URIs not specifically handled
 app.get(function (req, res) {
   res.render('404')

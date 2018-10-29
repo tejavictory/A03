@@ -1,0 +1,26 @@
+#main-game {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  background-color: #fff;
+  color: #444;
+  padding: 1em;
+}
+
+section {
+  background-color: #006747;
+  color: #fff;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 0.5em;
+  font-size: 1em;
+  text-align: center;
+}
+
+ol, ul {
+  padding-left: 1em;
+}
+
+li {
+  text-align: left;
+  font-size: 1em;
+}
