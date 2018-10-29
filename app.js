@@ -162,7 +162,7 @@ app.post('/Contact', function (req, res) {
  */      } else {
         console.log('Sending email...')
         if (info) { console.log('\nres SENT: ' + info.res + '\n') }
-        res.redirect('/index');
+        res.redirect('/');
         /*         res.render('contact-confirm.ejs')
  */      }
     })
