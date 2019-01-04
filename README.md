@@ -1,8 +1,8 @@
-#Assignment A03
+# Assignment A03
 
 Created by **Kancharla, Sai Krishna Teja**
 
-###Assassins Creed Fan page 
+### Assassins Creed Fan page 
 
 **Uses:**
 
